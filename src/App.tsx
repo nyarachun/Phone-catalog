@@ -9,6 +9,7 @@ import { CatalogPage } from './modules/CatalogPage';
 import { HomePage } from './modules/HomePage';
 import { CartProvider } from './modules/shared/components/context/CartContext';
 import { CartPage } from './modules/CartPage';
+// eslint-disable-next-line max-len
 import { FavoritesProvider } from './modules/shared/components/context/FavoritesContext';
 import { FavoritesPage } from './modules/FavoritesPage';
 import { RightsPage } from './modules/RightsPage';
