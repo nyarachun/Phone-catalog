@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './CartPage.module.scss';
-import { useCart } from '../shared/context/CartContext';
+import { useCart } from '../shared/components/context/CartContext';
 
 export const CartPage: React.FC = () => {
   const { cart, removeFromCart, updateQuantity, clearCart } = useCart();

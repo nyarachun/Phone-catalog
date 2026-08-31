@@ -31,7 +31,8 @@
     }
 
     @include mobile {
-      grid-template-columns: 1fr;
+      grid-template-columns: 272px;
+      justify-content: center;
       justify-items: center;
     }
   }

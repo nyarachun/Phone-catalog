@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFavorites } from '../shared/context/FavoritesContext';
+import { useFavorites } from '../shared/components/context/FavoritesContext';
 import { ProductCard } from '../shared/components/ProductCard';
 import { Breadcrumbs } from '../shared/components/Breadcrumbs';
 import styles from './FavouritesPage.module.scss';

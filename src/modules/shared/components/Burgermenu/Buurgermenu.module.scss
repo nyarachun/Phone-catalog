@@ -23,6 +23,7 @@
   &__logo {
     display: block;
     height: $logo-height-mobile;
+
     img {
       height: 100%;
       width: auto;
@@ -89,6 +90,7 @@
 
     &--active {
       color: $black;
+
       &::after {
         transform: scaleX(1);
       }
@@ -100,6 +102,23 @@
     height: 64px;
     border-top: 1px solid $elements-color;
   }
+
+  &__badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: #f447af;
+    color: $white;
+    font-size: 9px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    @include flex-center;
+
+    border: 1px solid $white;
+  }
+
 
   &__icon {
     flex: 1;
@@ -135,6 +154,11 @@
       &::after {
         transform: scaleX(1);
       }
+    }
+
+    &_wrapper {
+      position: relative;
+      display: flex;
     }
   }
 }

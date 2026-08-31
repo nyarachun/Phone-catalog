@@ -62,7 +62,9 @@ export const BannerSlider: React.FC = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(handleNext, 100000000000000);
+    const interval = setInterval(() => {
+      setCurrentIndex(prev => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);

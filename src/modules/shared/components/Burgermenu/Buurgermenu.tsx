@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import styles from './Buurgermenu.module.scss';
+import { useFavorites } from '../context/FavoritesContext';
 
 type Props = {
   isOpen: boolean;
@@ -8,6 +9,8 @@ type Props = {
 };
 
 export const BurgerMenu: React.FC<Props> = ({ isOpen, onClose }) => {
+  const { favorites } = useFavorites();
+
   if (!isOpen) {
     return null;
   }
@@ -57,10 +60,16 @@ export const BurgerMenu: React.FC<Props> = ({ isOpen, onClose }) => {
 
       <div className={styles.menu__footer}>
         <NavLink to="/favorites" className={getIconClass} onClick={onClose}>
-          <img
-            src={`${import.meta.env.BASE_URL}img/icons/heart.svg`}
-            alt="Favorites"
-          />
+          <div className={styles.menu__icon_wrapper}>
+            <img
+              src={`${import.meta.env.BASE_URL}img/icons/heart.svg`}
+              alt="Favorites"
+            />
+
+            {favorites.length > 0 && (
+              <span className={styles.menu__badge}>{favorites.length}</span>
+            )}
+          </div>
         </NavLink>
         <NavLink to="/cart" className={getIconClass} onClick={onClose}>
           <img

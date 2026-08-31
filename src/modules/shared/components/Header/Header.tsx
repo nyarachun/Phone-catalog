@@ -1,7 +1,7 @@
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.scss';
-import { useCart } from '../../context/CartContext';
-import { useFavorites } from '../../context/FavoritesContext';
+import { useCart } from '../context/CartContext';
+import { useFavorites } from '../context/FavoritesContext';
 import { BurgerMenu } from '../Burgermenu';
 import React, { useState } from 'react';
 import { Search } from '../Search';

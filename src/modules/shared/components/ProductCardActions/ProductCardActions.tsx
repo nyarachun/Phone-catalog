@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ProductCardActions.module.scss';
-import { useCart } from '../../context/CartContext';
-import { useFavorites } from '../../context/FavoritesContext';
+import { useCart } from '../context/CartContext';
+import { useFavorites } from '../context/FavoritesContext';
 
 type Props = {
   product: {

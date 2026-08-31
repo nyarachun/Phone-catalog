@@ -7,9 +7,9 @@ import { NotFoundPage } from './modules/NotFoundPage';
 import { ProductDetailsPage } from './modules/ProductDetailsPage';
 import { CatalogPage } from './modules/CatalogPage';
 import { HomePage } from './modules/HomePage';
-import { CartProvider } from './modules/shared/context/CartContext';
+import { CartProvider } from './modules/shared/components/context/CartContext';
 import { CartPage } from './modules/CartPage';
-import { FavoritesProvider } from './modules/shared/context/FavoritesContext';
+import { FavoritesProvider } from './modules/shared/components/context/FavoritesContext';
 import { FavoritesPage } from './modules/FavoritesPage';
 import { RightsPage } from './modules/RightsPage';
 
