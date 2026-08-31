@@ -33,16 +33,12 @@
 @mixin margins {
   margin: 24px 16px 56px;
 
-  @include tablet {
+  @media (min-width: $tablet) {
     margin: 24px 24px 64px;
   }
 
-  @include desktop {
-    margin: 24px 32px 81px;
-  }
-
-  @media (min-width: 1201px) {
-    margin: 24px 152px 81px;
+  @media (min-width: $desktop) {
+    margin: 24px clamp(32px, calc(32px + (100vw - 1200px) * 0.15), 152px) 81px;
   }
 }
 

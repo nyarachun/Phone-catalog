@@ -1,6 +1,5 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/variables' as *;
-@use '../../styles/fonts';
 
 .carousel {
   width: 100%;
@@ -25,37 +24,16 @@
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding-bottom: 8px;
+  padding: 12px 0 20px;
 
   &::-webkit-scrollbar {
     display: none;
-  }
-
-  @include tablet {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    overflow-x: visible;
-    padding-inline: 0;
-  }
-
-  @include mobile {
-    display: grid;
-    grid-template-columns: 1fr;
-    overflow-x: visible;
-    justify-items: center;
-    padding-inline: 16px;
-    scroll-padding-inline: 16px;
   }
 }
 
 .carousel__buttons {
   display: flex;
-  justify-content: space-between;
   gap: 16px;
-
-  @include mobile {
-    display: none;
-  }
 }
 
 .carousel__button {
@@ -85,17 +63,6 @@
 }
 
 .carousel__card_wrapper {
-  flex-shrink: 0;
+  flex: 0 0 auto;
   scroll-snap-align: start;
-  width: fit-content;
-
-  @include tablet {
-    width: 100%;
-    scroll-snap-align: unset;
-  }
-
-  @include mobile {
-    width: 100%;
-    scroll-snap-align: unset;
-  }
 }

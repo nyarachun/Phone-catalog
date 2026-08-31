@@ -5,8 +5,15 @@
 .product-card {
   display: flex;
   flex-direction: column;
-  width: $card-width-mobile;
+
+  width: clamp(
+    212px,
+    calc(212px + (100vw - 320px) * 0.08),
+    $card-width-desktop
+  );
+
   height: $card-height-mobile;
+
   border-radius: $border-radius;
   border: 1px solid $elements-color;
   padding: 32px;
@@ -14,26 +21,20 @@
   background-color: $white;
   align-items: stretch;
   box-sizing: border-box;
+
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 
   &:hover {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   }
 
-  @include desktop {
-    width: $card-width-desktop;
-    height: $card-height-desktop;
-  }
-
-  @include tablet {
-    width: 100%;
-    height: $card-height-tablet;
-  }
-
   @include mobile {
-    width: 100%;
     height: auto;
     min-height: $card-height-mobile;
+  }
+
+  @include desktop {
+    height: $card-height-desktop;
   }
 }
 

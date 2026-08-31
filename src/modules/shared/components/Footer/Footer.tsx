@@ -21,17 +21,17 @@ export const Footer = () => {
       </div>
 
       <nav className={styles.footer__nav}>
-        <Link
-          to="https://github.com/nyarachun/react_phone-catalog"
+        <a
+          href="https://github.com/nyarachun/react_phone-catalog"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.footer__link}
         >
           Github
-        </Link>
-        <Link to="tel:+380991234567" className={styles.footer__link}>
+        </a>
+        <a href="tel:+380991234567" className={styles.footer__link}>
           Contacts
-        </Link>
+        </a>
         <Link to="/rights" className={styles.footer__link}>
           Rights
         </Link>

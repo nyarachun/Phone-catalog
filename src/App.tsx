@@ -11,6 +11,7 @@ import { CartProvider } from './modules/shared/context/CartContext';
 import { CartPage } from './modules/CartPage';
 import { FavoritesProvider } from './modules/shared/context/FavoritesContext';
 import { FavoritesPage } from './modules/FavoritesPage';
+import { RightsPage } from './modules/RightsPage';
 
 const CategoryGuard = () => {
   const { category } = useParams();
@@ -42,6 +43,7 @@ export const App = () => (
             <Route path="/cart" element={<CartPage />} />
             <Route path="/favorites" element={<FavoritesPage />} />
             <Route path="*" element={<NotFoundPage />} />
+            <Route path="/rights" element={<RightsPage />} />
           </Routes>
         </main>
 
